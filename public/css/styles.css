@@ -1,0 +1,69 @@
+/* Complementos visuales para Tailwind. */
+:root{color-scheme:light}
+body{transition:background-color .25s,color .25s}
+.asia-light{--page:#f5ead8;--surface:#fff8ed;--ink:#101a13;--muted:#504b42;--line:rgba(173,119,40,.48);--gold:#bd842e;--emerald:#064b32;background:var(--page);color:var(--ink)}
+.asia-dark{--page:#0b0c0b;--surface:#151714;--ink:#f8f3e9;--muted:#d0c8b9;--line:rgba(214,170,91,.48);--gold:#e2b761;--emerald:#075238;background:var(--page);color:var(--ink);color-scheme:dark}
+.asia-logo{color:var(--gold);text-decoration:none;line-height:1}
+.nav-link{position:relative;padding:10px 0;font-size:16px;font-weight:600;color:var(--ink);transition:color .2s}
+.nav-link:hover{color:var(--emerald)}
+.nav-link.active:after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,var(--emerald),var(--gold))}
+.theme-switch{background:var(--surface);color:var(--gold)}
+.theme-light,.theme-dark{transition:background .2s,color .2s}
+.asia-light .theme-light{background:var(--emerald);color:#f8e3b5}
+.asia-light .theme-dark{color:var(--gold)}
+.asia-dark .theme-dark{background:var(--gold);color:#17130c}
+.asia-dark .theme-light{color:var(--gold)}
+.hero-section{background:#e8d5b7;color:#10150f}
+.hero-photo-layer{display:flex;justify-content:flex-end;align-items:stretch;right:4%;left:43%;height:100%;gap:0}
+.hero-person{width:52%;height:100%;overflow:hidden}
+.hero-person img{width:100%;height:100%;object-fit:cover;object-position:center 24%;filter:saturate(.88)}
+.hero-man{clip-path:ellipse(75% 88% at 54% 64%)}
+.hero-woman{margin-left:-7%;clip-path:ellipse(77% 90% at 52% 64%)}
+.hero-overlay{background:linear-gradient(90deg,#fff8ed 0%,rgba(255,248,237,.97) 29%,rgba(255,248,237,.68) 43%,rgba(255,248,237,.04) 67%,rgba(36,24,13,.08) 100%)}
+.hero-gold-word{color:#a96f1c}
+.hero-ribbons{border-color:#c28b36;box-shadow:12px 0 0 -10px #075238,24px 0 0 -22px #c28b36}
+.btn-emerald{display:inline-flex;min-height:51px;align-items:center;justify-content:center;gap:12px;border-radius:17px;background:linear-gradient(110deg,#075238,#023522);padding:0 25px;color:#fff8e9;font-size:15px;font-weight:700;box-shadow:0 7px 20px rgba(4,66,43,.14);transition:transform .2s,filter .2s}
+.btn-emerald:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.btn-outline{display:inline-flex;min-height:51px;align-items:center;justify-content:center;gap:12px;border:1.5px solid #b77d27;border-radius:16px;padding:0 25px;color:#18150f;font-size:15px;font-weight:600;background:rgba(255,255,255,.25)}
+.btn-outline:hover{background:rgba(201,148,63,.12)}
+.benefits-bar{background:var(--surface);border-color:var(--line);color:var(--ink);padding:13px max(calc((100vw - 1260px)/2),5%)}
+.benefit-item{display:flex;align-items:center;justify-content:center;gap:20px;min-height:58px;border-right:1px solid var(--line)}
+.benefit-item:last-child{border:0}
+.benefit-icon{width:39px;height:39px;flex-shrink:0;color:var(--emerald);stroke-width:1.7}
+.benefit-item:nth-child(2) .benefit-icon{color:var(--gold)}
+.benefit-item h2{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:700;line-height:1.05}
+.benefit-item p{margin-top:5px;font-size:13px;color:var(--muted)}
+.services-section{background:var(--page);color:var(--ink)}
+.section-heading span{width:65px;height:2px;background:linear-gradient(90deg,var(--gold),#e6c477)}
+.section-heading h2{color:var(--emerald)}
+.service-card{overflow:hidden;border:1px solid #bd842e;border-radius:15px;background:var(--surface);box-shadow:0 5px 14px rgba(48,34,13,.08)}
+.service-card>img{display:block;width:100%;height:124px;object-fit:cover}
+.service-caption{display:flex;height:53px;align-items:center;justify-content:center;gap:12px;background:linear-gradient(110deg,#075238,#023522);color:#fff8e9}
+.service-caption svg{width:27px;height:27px;color:#f0c35e;stroke-width:1.7}
+.service-caption h3{font-family:"Cormorant Garamond",serif;font-size:18px;font-weight:700}
+.booking-section{background:var(--page)}
+.booking-banner{grid-template-columns:42% 32% 26%;border-color:#c18a37;background:var(--surface);box-shadow:0 8px 25px rgba(57,39,15,.08)}
+.booking-image{background-image:url('../images/booking.jpg');background-position:center;background-size:cover}
+.booking-title{border-right:1px solid var(--line);color:var(--ink)}
+.booking-title h2{color:var(--ink)}
+.booking-action{color:var(--ink)}
+.booking-form{border-color:var(--line);background:var(--surface);color:var(--ink)}
+.booking-form label{display:grid;gap:7px;color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.booking-form input,.booking-form select{height:44px;width:100%;border:1px solid var(--line);border-radius:9px;background:var(--page);padding:0 12px;color:var(--ink);outline:none}
+.booking-form input:focus,.booking-form select:focus{border-color:var(--emerald);box-shadow:0 0 0 3px rgba(6,75,50,.12)}
+.footer-section{border-color:var(--line);background:var(--surface);color:var(--muted)}
+/* Modo oscuro: 65% negro, 25% dorado y 10% verde esmeralda en la interfaz. */
+.asia-dark .hero-section{background:#0b0c0b;color:#f8f3e9}
+.asia-dark .hero-overlay{background:linear-gradient(90deg,#0b0c0b 0%,rgba(11,12,11,.98) 28%,rgba(11,12,11,.82) 43%,rgba(11,12,11,.12) 70%,rgba(11,12,11,.08) 100%)}
+.asia-dark .hero-gold-word{color:#e2b761}
+.asia-dark .btn-outline{color:#f8f3e9;background:rgba(0,0,0,.25);border-color:#d9ad62}
+.asia-dark .btn-outline:hover{background:rgba(217,173,98,.12)}
+.asia-dark .section-heading h2{color:#f5ead8}
+.asia-dark .service-card{background:#151714}
+.asia-dark .service-caption{background:linear-gradient(110deg,#151714,#0b0c0b)}
+.asia-dark .benefit-icon{color:#e2b761}
+.asia-dark .benefit-item:nth-child(4) .benefit-icon{color:#08744a}
+.asia-dark .booking-banner{background:#151714}
+.asia-dark .booking-image{filter:brightness(.72)}
+@media(max-width:1023px){.hero-photo-layer{left:38%;right:0}.hero-overlay{background:linear-gradient(90deg,#fff8ed 0%,rgba(255,248,237,.94) 34%,rgba(255,248,237,.42) 62%,rgba(255,248,237,.04) 100%)}.benefit-item{gap:12px}.benefit-item:nth-child(2){border-right:0}.benefit-item:nth-child(1),.benefit-item:nth-child(2){border-bottom:1px solid var(--line)}.booking-banner{grid-template-columns:38% 62%}.booking-action{grid-column:2;padding-top:0}.booking-title{border:0}}
+@media(max-width:639px){.hero-section{min-height:670px}.hero-photo-layer{left:0;right:0;top:245px;height:425px;opacity:.72}.hero-overlay{background:linear-gradient(180deg,#fff8ed 0%,rgba(255,248,237,.97) 38%,rgba(255,248,237,.18) 75%,rgba(255,248,237,.05) 100%)}.asia-dark .hero-overlay{background:linear-gradient(180deg,#0b0c0b 0%,rgba(11,12,11,.96) 37%,rgba(11,12,11,.25) 78%,rgba(11,12,11,.1) 100%)}.hero-ribbons{opacity:.6}.benefits-bar{padding:8px 10px}.benefit-item{justify-content:flex-start;padding:10px 6px}.benefit-icon{width:28px;height:28px}.benefit-item h2{font-size:17px}.benefit-item p{font-size:10px}.benefit-item:nth-child(3){border-right:1px solid var(--line)}.benefit-item:nth-child(3),.benefit-item:nth-child(4){border-bottom:0}.service-card>img{height:108px}.service-caption{height:48px;gap:7px}.service-caption h3{font-size:15px}.service-caption svg{width:21px;height:21px}.booking-banner{grid-template-columns:1fr}.booking-image{min-height:170px}.booking-title{padding-bottom:8px}.booking-action{grid-column:1;padding-top:8px;padding-bottom:22px}.booking-title h2{font-size:36px}}
